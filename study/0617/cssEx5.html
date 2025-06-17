@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>레이아웃 연습</title>
+        <style>
+
+            header,footer{
+                background-color: blue;
+                
+
+            }
+
+            header{
+                height: 60px;
+            }
+
+            footer{
+                height: 40px;
+            }
+
+            main{
+                width: 80%;
+            }
+
+
+            section{
+                display: flex;
+                gap:20px;
+
+            }
+
+            .left{
+                width: 30px;
+                 background-color: lightcoral;
+            }
+
+            .right{
+                width: 70px;
+                background-color: lightgoldenrodyellow;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>웹 페이지 제목</h1>
+        </header>
+
+        <main>
+            <section>
+                <div class="left">
+                    <p>왼쪽 열</p>
+                </div>
+                <div class="right">
+                    <p>오른쪽 열</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>저작권 &copy; 2025</p>
+        </footer>
+    </body>
+</html>
