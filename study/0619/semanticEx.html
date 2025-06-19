@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>나의 첫 웹 페이지</title>
+    <style>
+      header {
+        height: 20%;
+        background-color: lightyellow;
+      }
+
+      nav {
+        margin-right: 10px;
+
+        width: 20%;
+      }
+
+      aside {
+        /* margin-right: 10px; */
+
+        background-color: lightcyan;
+      }
+
+      main {
+        flex: 1;
+        height: 100%;
+      }
+
+      article {
+        background-color: lightpink;
+        width: 100%;
+      }
+
+      section {
+        padding: 20px;
+        background-color: lightblue;
+        width: 100%;
+      }
+
+      article {
+        padding: 20px;
+      }
+      footer {
+        clear: both;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>나의 첫 웹 페이지</h1>
+    </header>
+    <div style="display: flex; gap: 10px">
+      <aside>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Notice</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main>
+        <section>
+          <h2>나의 웹 페이지</h2>
+          <p>나의 웹 페이지 만들기 section 블로그 글</p>
+        </section>
+
+        <article>
+          <h2>나의 웹 페이지</h2>
+          <p>나의 웹 페이지 만들기 article 본문</p>
+        </article>
+      </main>
+    </div>
+
+    <footer>
+      <p>&copy; 저작권 정보가 포함 된 My Web Site footer</p>
+    </footer>
+  </body>
+</html>
