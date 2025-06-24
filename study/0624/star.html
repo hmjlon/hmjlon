@@ -18,6 +18,17 @@
         star = star + "*";
         console.log(star);
       }
+      const num = prompt("숫자를 입력하시오: ");
+      let mark = "";
+
+      for (let i = 1; i <= num; i++) {
+        for (let j = 1; j <= i; j++) {
+          mark += "*";
+        }
+        mark += "<br>";
+      }
+
+      document.write(mark);
     </script>
   </body>
 </html>

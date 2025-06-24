@@ -3,7 +3,7 @@
 // document.write("<h1>Document Write</h1>");
 
 // let currentYear = 2025;
-// let birthYear = prompt("태어난해 입력하세요");
+// let birthYear = prompt("태어난 해를 입력하세요");
 // let age = currentYear - birthYear + 1;
 // alert("당신의 나이는 " + age + "살 입니다.");
 
@@ -36,8 +36,7 @@
 // console.log(a);
 // a /= 4;
 // console.log(a);
-
-// console.log(`최종 값은 ${a}입니다`);
+// console.log(`최종 값은 ${a} 입니다`);
 
 //  1. 이름과 나이를 입력 받아 인삿말 출력하기
 

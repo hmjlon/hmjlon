@@ -19,27 +19,32 @@
       //     j++;
       //   }
 
-      //팩토리얼 계산기
-      //5! = 5 * 4 * 3 * 2 * 1
-      //4! = 4 * 3 * 2 * 1
-      //n! = n * (n-1) * (n-2)* ... * 1
+      // 실습 예시: 팩토리얼 계산기
+      // 5! = 5 * 4 * 3 * 2 * 1
+      // 4! = 4 * 3 * 2 * 1
+      // 3! = 3 * 2 * 1
+      // 2! = 2 * 1
+      // 1! = 1
+      // 0! = 1
+      // n! = n * (n - 1) * (n - 2) * ... * 1
 
-      //   let i = 5;
-      //   let result = 1;
+      // let i = 5;
+      // let result = 1;
 
-      //   while (i > 1) {
-      //     result *= i;
-      //     i--;
-      //   }
-      //   console.log(result);
+      // while (i > 1) {
+      //   result *= i;
+      //   i--;
+      // }
 
-      //   let i = Number(prompt("숫자입력"));
-      //   let j = 1;
-      //   while (i > 1) {
-      //     j = i * j;
-      //     i--;
-      //   }
-      //   console.log(`${j}`);
+      // console.log(result);
+
+      let i = Number(prompt("숫자입력"));
+      let j = 1;
+      while (i > 1) {
+        j = i * j;
+        i--;
+      }
+      console.log(`${j}`);
     </script>
   </body>
 </html>
