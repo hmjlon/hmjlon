@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 예제</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        border-color: red;
+      }
+
+      .active {
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+
+  <body>
+    <p id="greeting">안녕하세요 ! 반갑습니다!</p>
+    <img src="https://picsum.photos/200/300" alt="random image" />
+    <button id="change-image">이미지 변경</button>
+    <div id="box">Box</div>
+    <button id="change-box">박스 변경</button>
+
+    <script>
+      let text = document.getElementById("greeting"); //아이디는 유일
+      text.innerText = "Hello World!";
+
+      //   let image = document.getElementsByTagName("img"); //태그는 여러개 그래서 이미s 붙음
+      //   image[0].src = "https://picsum.photos/200/300";
+
+      let button = document.getElementById("change-image");
+      button.addEventListener("click", function () {
+        // alert(); //어디까지 되는지 확인
+        let image = document.getElementsByTagName("img"); //태그는 여러개 그래서 이미s 붙음
+        // alert(); //어디까지 되는지 확인
+        image[0].src = "https://picsum.photos/300/300";
+      });
+
+      let boxbutton = document.getElementById("change-box");
+      boxbutton.addEventListener("click", function () {
+        let box = document.getElementById("box");
+        box.style.backgroundColor = "blue";
+      });
+
+      boxbutton.addEventListener("mouseover", function () {
+        let box = document.getElementById("box");
+        box.classList.add("active");
+      });
+
+      boxbutton.addEventListener("mouseout", function () {
+        let box = document.getElementById("box");
+        box.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>
