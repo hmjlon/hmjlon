@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 폼 만들기</title>
+  </head>
+
+  <body>
+    <form id="signupForm">
+      <input id="name" type="text" placeholder="이름" />
+      <input id="email" type="email" placeholder="이메일" />
+      <input id="password" type="password" placeholder="비밀번호" />
+      <input id="submit" type="submit" value="제출" onclick="validateForm()" />
+    </form>
+
+    <div class="preview">
+      <h3>미리보기</h3>
+      <p>이름:<span id="previewName"></span></p>
+      <p>이메일:<span id="previewEmail"></span></p>
+      <p>비밀번호: <span id="previewPassword"></span></p>
+    </div>
+
+    <script>
+      function validateForm() {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
+
+        if (name === "") {
+          alert("이름을 입력하세요");
+          return false;
+        }
+
+        const emailRegex = /^[\w.-]+@[\w.-]+\.[A-Za-z]{2,}$/;
+        if (!emailRegex.test(email)) {
+          alert("올바른 이메일을 입력하세요");
+          return false;
+        }
+        if (password.length < 6) {
+          alert("비밀번호는 6자 이상이어야 합니다.");
+          return false;
+        }
+
+        alert("회원가입 성공!");
+        return true;
+      }
+
+      function updatePreview() {
+        document.getElementById("previewName").textContent =
+          document.getElementById("name").value;
+        document.getElementById("previewEmail").textContent =
+          document.getElementById("email").value;
+        document.getElementById("previewPassword").textContent =
+          document.getElementById("password").value;
+      }
+
+      document.getElementById("name").addEventListener("input", updatePreview);
+      document.getElementById("email").addEventListener("input", updatePreview);
+      document
+        .getElementById("password")
+        .addEventListener("input", updatePreview);
+    </script>
+  </body>
+</html>
