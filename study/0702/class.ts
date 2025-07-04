@@ -1,12 +1,12 @@
 class Person2 {
-  //   name: string;
-  //   age: number;
+  name: string;
+  age: number;
 
-  //   constructor(name: string, age: number) {
-  //     this.name = name;
-  //     this.age = age;
-  //   }
-  constructor(public name: string, private age: number) {} //축약하면 이렇게 쓸 수 있음
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+  // constructor(public name: string, private age: number) {} //축약하면 이렇게 쓸 수 있음
 
   introduce(): string {
     return `Hi, I'm ${this.name}`;
@@ -78,3 +78,17 @@ interface Vehicle {
   accelerate(): void;
   trunck(): void;
 }
+
+class Student {
+  name: string;
+  no: number;
+}
+
+const stu = new Student();
+
+stu.name = "나이";
+stu.no = 5;
+
+console.log(stu);
+
+let car = new Car();
