@@ -46,7 +46,8 @@
 
 <pre>
 
-- https, SSL 인증서 기초
+
+* https, SSL 인증서 기초
 
 1. HTTPS란?
 
