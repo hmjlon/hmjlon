@@ -10,8 +10,6 @@
 - 예: {name: "Tom"} → '{"name":"Tom"}'
 
 
-
-
 * JSON, XML, YAML 비교
 
 <JSON>
@@ -42,7 +40,7 @@
 
 </pre>
 
-<img src="json-xtml-yaml.PNG" alt="HTTPS 작동 방식 설명 이미지" width="500">
+<img src="json-xtml-yaml.PNG" alt="HTTPS 작동 방식 설명 이미지" style="width: 100%; max-width: 900px;">
 
 <pre>
 
@@ -54,11 +52,15 @@
 
 -> 사용자의 정보가 도청·위조되지 않도록 보호
 
+
+
 2. SSL 인증서란?
 
 -사이트의 신원을 인증하고, 암호화 통신을 가능하게 하는 증명서
 
 -> 브라우저와 서버 사이에 안전한 연결을 만들어줌
+
+
 
 3. 작동 방식 요약
 
@@ -69,6 +71,8 @@
 3)브라우저가 인증서 확인
 
 4)안전한 암호화 통신 시작
+
+
 
 4. 왜 HTTPS를 써야 하나?
 
