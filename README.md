@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-### My name is  JI YOUNG ~~
+### 💕 My name is  JI YOUNG ~~
 
 > 프론트엔드 개발자 및 백엔드 개발자 그리고 클라우드 및 소프트웨어 아키텍트가 되고 싶습니다.
 
