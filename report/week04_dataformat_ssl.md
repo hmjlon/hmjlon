@@ -42,7 +42,7 @@
 
 </pre>
 
-<img src="json-xtml-yaml.PNG" alt="HTTPS 작동 방식 설명 이미지" style="width: 100%; max-width: 900px;">
+<img src="./img/json-xtml-yaml.PNG" alt="HTTPS 작동 방식 설명 이미지" style="width: 100%; max-width: 900px;">
 
 <pre>
 
