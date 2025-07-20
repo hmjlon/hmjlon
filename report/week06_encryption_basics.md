@@ -154,10 +154,3 @@
 | 전자계약/서류 제출     | 비대칭키 + 서명    | 신원 인증 및 위변조 방지 목적          |
 
 ---
-
-## 🔗 참고 자료
-
-- SHA256 해시 테스트: https://emn178.github.io/online-tools/sha256.html
-- AES 암호화 시뮬레이터: https://www.cryptogame.io/tools/aes-encrypt
-- RSA 시각화 도구: https://travistidwell.com/jsencrypt/demo/
-- 공개키 기반구조(PKI): https://ko.wikipedia.org/wiki/공개_키_기반_구조
