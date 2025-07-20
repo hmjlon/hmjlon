@@ -1,87 +1,46 @@
-📌 프로젝트명: 콘텐츠 감상 캘린더 (Movie/Book/Drama Tracker)
+# Getting Started with Create React App
 
-이 프로젝트는 HTML/CSS/JavaScript 수업에서 진행된 Small Project입니다. DOM 조작, 날짜 처리, 이미지 출력 등 프론트엔드 기초 개념을 실습하며 제작하였으며, 사용자가 날짜별로 감상한 영화, 책, 드라마 등을 한눈에 확인할 수 있는 인터랙티브 캘린더입니다.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
----
+## Available Scripts
 
-📆 프로젝트 기간
-- 시작일: 2025.07.13
-- 종료일: 2025.
+In the project directory, you can run:
 
----
+### `npm start`
 
-🎯 주요 목표
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-✅ 날짜별 콘텐츠(영화/책/드라마) 기록 기능 구현  
-✅ 캘린더 화면에 포스터 이미지 시각화  
-✅ 사용자의 클릭 또는 입력을 통한 기록 추가 기능  
-✅ 감상한 항목에 마우스오버 시 상세 정보(제목, 메모 등) 표시  
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
----
+### `npm test`
 
-⚙️ 사용 기술 스택 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-| 분류       | 기술명                |
-|------------|-----------------------|
-| 프론트엔드 | HTML, CSS, JavaScript |
-| 기타       | Git, GitHub           |
+### `npm run build`
 
----
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-🧱 프로젝트 구조
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-```
-📁 content-calendar/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
----
+### `npm run eject`
 
-💡 주요 기능 설명
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-📅 기능 1: 월간 캘린더 렌더링
-- 현재 월 기준으로 날짜를 자동 생성  
-- 각 날짜 칸에 여러 개의 콘텐츠 썸네일 삽입 가능  
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-🖼️ 기능 2: 포스터 이미지 등록 및 출력
-- 사용자가 선택한 날짜에 포스터 이미지 업로드 또는 URL 입력  
-- 각 날짜 칸에 썸네일 형태로 이미지 표시  
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-📝 기능 3: 콘텐츠 정보 입력 및 보기
-- 제목, 감상일, 메모 입력 가능  
-- 마우스오버 시 간단한 정보 툴팁 표시  
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-🗂️ 기능 4: 콘텐츠 타입별 구분
-- 영화 🎬 / 책 📚 / 드라마 📺 이모지 및 배경색으로 시각적 구분  
+## Learn More
 
----
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-🖼️ 데모 화면
-
-| 주요 화면     | 설명                     |
-|--------------|--------------------------|
-| 기본 캘린더   | 월별 날짜 표시           |
-| 포스터 등록됨 | 날짜별 썸네일 보기 가능  |
-
----
-
-🧠 회고 요약
-- 어려웠던 점: 
-- 배운 점:  
-- 개선하고 싶은 점: 
-
----
-
-📦 배포 주소
-https://github.com/hmjlon/content-calendar
-
----
-
-🙋‍♀️ 개발자
-
-| 이름   | GitHub                                  |
-|--------|------------------------------------------|
-| 윤지영 | [github.com/hmjlon](https://github.com/hmjlon) |
+To learn React, check out the [React documentation](https://reactjs.org/).
