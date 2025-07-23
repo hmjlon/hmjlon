@@ -1,4 +1,6 @@
-import type {Action} from 'redux'
+// import type {Action} from 'redux'
 
-export type State = any
-export type Actions = Action
+// export type State = string
+
+// export type SetClockAction
+// //export type Actions = Action
