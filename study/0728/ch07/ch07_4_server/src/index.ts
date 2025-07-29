@@ -16,4 +16,4 @@ const connectCallback = (db: MongoDB) => {
   )
 }
 
-connectAndUseDB(connectCallback, 'ch07', 'mongodb://192.168.0.20:27017')
+connectAndUseDB(connectCallback, 'ch07', 'mongodb://localhost:27017')

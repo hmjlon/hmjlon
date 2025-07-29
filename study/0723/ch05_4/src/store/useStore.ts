@@ -9,7 +9,7 @@ const initializeStore = () => {
   const store = configureStore({
     reducer: rootReducer,
     middleware: getDefaultMiddleware =>
-      useLogger ? getDefaultMiddleware().concat(logger) : getDefaultMiddleware()
+      useLogger ? getDefaultMiddleware() : getDefaultMiddleware()
   })
   return store
 }
