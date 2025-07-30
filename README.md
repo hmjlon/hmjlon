@@ -2,7 +2,7 @@
 
 <h1>👋 Hi there 😘</h1>
 
-### 💕 My name is JI YOUNG 💕
+### My name is JI YOUNG 💕
 
 > 프론트엔드 개발자 및 백엔드 개발자 그리고 클라우드 및 소프트웨어 아키텍트가 되고 싶습니다.
 
@@ -76,12 +76,12 @@
   </tr>
   <tr>
     <td>JavaScript</td>
-    <td>⭐⭐⭐⭐⭐</td>
+    <td>⭐⭐⭐</td>
     <td>1년</td>
   </tr>
   <tr>
     <td>React</td>
-    <td>⭐⭐⭐⭐</td>
+    <td>⭐⭐⭐</td>
     <td>1년</td>
   </tr>
   <tr>
@@ -91,7 +91,7 @@
   </tr>
   <tr>
     <td>Java</td>
-    <td>⭐⭐⭐</td>
+    <td>⭐⭐</td>
     <td>1년</td>
   </tr>
   <tr>
