@@ -117,21 +117,21 @@ Express를 이용하여 서버를 만들고, MongoDB를 사용하여 데이터�
 ### 📝 2) 전체 코드
 
 ```js
-const express = require("express");
-const mongoose = require("mongoose");
-const app = express();
-const port = 3000;
+const express = require("express"); // 웹 서버를 쉽게 만들 수 있는 도구
+const mongoose = require("mongoose"); // MongoDB에 연결하고 사용할 수 있게 해주는 도구
+const app = express(); // express 앱 만들기 (서버 역할)
+const port = 3000; // 3000번 문(포트)으로 사람들 맞이
 
 // MongoDB 연결 설정
 mongoose.connect("mongodb://localhost:27017/mydatabase", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+  useNewUrlParser: true, // 새 주소 해석 방법 사용 (안정성↑)
+  useUnifiedTopology: true, // 최신 방식으로 MongoDB에 연결
 });
 
 // 스키마 정의
 const bookSchema = new mongoose.Schema({
-  title: String,
-  author: String,
+  title: String, // 책 제목은 글자로 저장
+  author: String, // 책 저자도 글자로 저장
 });
 
 // 모델 생성
