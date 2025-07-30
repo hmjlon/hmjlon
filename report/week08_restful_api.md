@@ -145,25 +145,25 @@ app.use(express.json());
 // 전체 책 목록 조회
 app.get("/books", async (req, res) => {
   try {
-    const books = await Book.find();
-    res.json(books);
+    const books = await Book.find(); // 데이터베이스에 있는 모든 책을 찾음
+    res.json(books); // 그걸 JSON 형식으로 사용자에게 응답함
   } catch (err) {
-    res.status(500).json({ message: err.message });
+    res.status(500).json({ message: err.message }); // 오류가 나면 500 에러와 함께 메시지 전달
   }
 });
 
 // 새 책 등록
 app.post("/books", async (req, res) => {
   const book = new Book({
-    title: req.body.title,
-    author: req.body.author,
+    title: req.body.title, // 요청에서 받은 title
+    author: req.body.author, // 요청에서 받은 author
   });
 
   try {
-    const newBook = await book.save();
-    res.status(201).json(newBook);
+    const newBook = await book.save(); // 데이터베이스에 저장
+    res.status(201).json(newBook); // 성공적으로 저장되면 201 상태와 저장된 책 반환
   } catch (err) {
-    res.status(400).json({ message: err.message });
+    res.status(400).json({ message: err.message }); // 잘못된 입력이면 400 에러
   }
 });
 
