@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>👋 Hi there 😘</h1>
+<h1>👋 Hi there </h1>
 
 ### My name is JI YOUNG 💕
 
