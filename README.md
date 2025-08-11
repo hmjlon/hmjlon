@@ -1,10 +1,6 @@
 <div align="center">
 
-<<<<<<< HEAD
-<h1>👋 Hi there 😘</h1>
-=======
 <h1>👋 Hi there </h1>
->>>>>>> 47acc2889e91be880f74bf9a943255a856c7648f
 
 ### My name is JI YOUNG 💕
 
