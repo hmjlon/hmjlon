@@ -1,6 +1,9 @@
 const http = require("http");
 const url = require("url");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 47acc2889e91be880f74bf9a943255a856c7648f
 http
   .createServer((req, res) => {
     const path = url.parse(req.url, true).pathname;
@@ -11,6 +14,7 @@ http
       notFound(req, res);
     }
   })
+<<<<<<< HEAD
   .listen("3000", () => console.log("라우터를 리팩터링해보자!"));
 
 const user = (req, res) => {
@@ -37,3 +41,6 @@ const urlMap = {
   "/user": user,
   "/feed": feed,
 };
+=======
+  .listen("3000", () => console.log("라우터를 리팩터링 해보자! "));
+>>>>>>> 47acc2889e91be880f74bf9a943255a856c7648f

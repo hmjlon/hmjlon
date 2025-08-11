@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const http = require("http");
 const url = require("url");
 http
@@ -15,10 +16,13 @@ http
   })
   .listen("3000", () => console.log("라우터를 만들어보자!"));
 
+=======
+>>>>>>> 47acc2889e91be880f74bf9a943255a856c7648f
 const user = (req, res) => {
   const userInfo = url.parse(req.url, true).query;
   res.end(`[user] name: ${userInfo.name}, age: ${userInfo.age}`);
 };
+<<<<<<< HEAD
 
 const feed = (req, res) => {
   res.end(`<ul>
@@ -33,3 +37,5 @@ const notFound = (req, res) => {
   res.statusCode = 404;
   res.end("404 page not found");
 };
+=======
+>>>>>>> 47acc2889e91be880f74bf9a943255a856c7648f
