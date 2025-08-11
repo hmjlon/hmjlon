@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bom 연습</title>
+  </head>
+  <body>
+    <script>
+      window.alert("안녕하세요!");
+
+      console.log("창 너비:", window.innerWidth);
+      console.log("창 높이:", window.innerHeight);
+
+      setTimeout(() => {
+        alert("3초 후 실행됨!");
+      }, 3000);
+
+      console.log("브라우저 이름:", navigator.appName);
+      console.log("사용자 에이전트:", navigator.userAgent);
+      console.log("온라인 상태:", navigator.onLine);
+
+      console.log("사용 언어:", navigator.language);
+
+      console.log("전체 URL:", location.href);
+      console.log("호스트:", location.hostname);
+      //   console.log("경로:", location.pathname);
+
+      //location.href = "https://www.google.com";
+
+      //location.reload();
+
+      history.back(); // 뒤로
+      history.forward(); // 앞으로
+
+      console.log("방문한 페이지 수:", history.length);
+    </script>
+  </body>
+</html>

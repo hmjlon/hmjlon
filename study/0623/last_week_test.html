@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>강의 목차</title>
+    <style>
+      p {
+        width: 200px;
+        height: 80px;
+        border: 5px solid red;
+        margin: 20px;
+        color: red;
+        font-size: x-large;
+        font-weight: bold;
+        display: flex;
+        justify-content: center; 
+        align-items: center;      
+        margin-bottom: 50px;
+      }
+
+      .box {
+        display: flex;
+      }
+
+      table {
+        border-collapse: collapse;
+        margin-bottom: 50px;
+        margin-left: 30px;
+      }
+
+      th {
+        background-color: lightgray;
+        width: 150px;
+      }
+
+      td {
+        width:100px;
+        text-align: center;
+      }
+      span {
+        text-align: center;
+      }
+
+      video {
+        width: 400px;
+        height: 220px;
+      }
+      caption {
+        margin-top: 10px;
+        caption-side: bottom;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>강의 목차</h1>
+    <div class="box">
+      <p>수학</p>
+      <p>과학</p>
+      <p>컴퓨터</p>
+      <p>미술</p>
+    </div>
+
+ 
+      <table border="1">
+        
+      <caption>
+        2015 국민 독서실태
+      </caption>
+        <tr>
+          <th>구분</th>
+          <th>성인</th>
+          <th>학생</th>
+        </tr>
+        <tr>
+          <th>독서율</th>
+          <td>65.3%</td>
+          <td>94.9%</td>
+        </tr>
+        <tr>
+          <th>연평균 독서량</th>
+          <td>9.1권</td>
+          <td>29.8권</td>
+        </tr>
+        <tr>
+          <th>공공도서관 이용률</th>
+          <td>28.2%</td>
+          <td>64.9%</td>
+        </tr>
+      </table>
+
+    </div>
+
+    <h1>SUMMER BEACH</h1>
+    <div class="video"></div>
+    <video autoplay loop muted controls width="600px">
+      <source
+        src="http://thinkingform.com/wp-content/uploads/2017/09/video-sample-mp4.mp4?_=1"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+  </body>
+</html>

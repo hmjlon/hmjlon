@@ -1,0 +1,26 @@
+//1번
+function test(n) {
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 === 0) {
+      console.log(i);
+    }
+  }
+}
+
+//2번
+function solution(n) {
+  for (let i = 1; i <= n; i++) {
+    if (i === n) {
+      return "끝!";
+    }
+  }
+}
+
+//3번
+function isEven(n) {
+  if (n % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
