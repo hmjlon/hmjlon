@@ -1,4 +1,4 @@
 function solution(array, n) {
-    
-    return array.filter(x=>x===n).length;
+    var answer = 0;
+    return answer;
 }
