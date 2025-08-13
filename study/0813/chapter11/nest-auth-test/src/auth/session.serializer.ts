@@ -13,7 +13,12 @@ export class SessionSerializer extends PassportSerializer {
   // ❸ 세션에 정보를 저장할 때 사용
 
   serializeUser(user: any, done: (err: Error | null, user: any) => void): any {
-    done(null, user.email); // 세션에 저장할 정보
+    if (user && user.email) {
+      // 최소한의 정보만 세션에 저장
+      done(null, { email: user.email, id: user.id ?? null });
+    } else {
+      done(new Error('No user to serialize'), null);
+    }
   }
 
   // ❹ 세션에서 정보를 꺼내 올 때 사용

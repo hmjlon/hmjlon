@@ -9,12 +9,15 @@ export class User {
   @Column({ unique: true })
   email: string; // ❹ email은 유니크한 값
 
-  @Column()
+  @Column({ nullable: true })
   password: string;
 
   @Column()
   username: string;
 
   @Column({ type: 'datetime', default: () => 'CURRENT_TIMESTAMP' }) // ❺ 기본값을 넣어줌
-  createdDt: Date = new Date();
+  createdDt: Date;
+
+  @Column({ nullable: true })
+  providerId: string;
 }

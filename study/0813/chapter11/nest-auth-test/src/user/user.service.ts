@@ -12,7 +12,6 @@ export class UserService {
 
   // ❸ 유저 생성
   createUser(user): Promise<User> {
-    
     return this.userRepository.save(user);
   }
 
@@ -40,5 +39,19 @@ export class UserService {
   // ❻ 유저 정보 삭제
   deleteUser(email: any) {
     return this.userRepository.delete({ email });
+  }
+
+  async findByEmailOrSave(email, username, providerId): Promise<User> {
+    const foundUser = await this.getUser(email);
+    if (foundUser) {
+      return foundUser;
+    }
+
+    const newUser = await this.userRepository.save({
+      email,
+      username,
+      providerId,
+    });
+    return newUser;
   }
 }
