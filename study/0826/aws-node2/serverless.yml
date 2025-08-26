@@ -1,0 +1,19 @@
+service: aws-node2
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: ap-northeast-2
+  deploymentMethod: direct         # 중앙 SSM/버킷 안 쓰고 내 버킷으로 직접
+  deploymentBucket:
+    name: tmd-genai1-students12    # 이미 만든 버킷 (서울 리전)
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi:
+          path: /hello
+          method: get
+
+
