@@ -1,0 +1,128 @@
+org: hmjlon
+app: my-service
+service: my-service
+
+custom:
+  stage: ${opt:stage, 'dev'}
+  uploadBucketName: ${self:service}-upload-bucket-${self:custom.stage}
+  destBucketName: ${self:service}-optimized-bucket-${self:custom.stage}
+  usersTableName: ${self:service}-users-${self:custom.stage}
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: ap-northeast-2
+  # 배포 버킷(이미 만들어둔 거 사용)
+  deploymentBucket:
+    name: tmd-genai1-students12
+    blockPublicAccess: true
+    serverSideEncryption: AES256
+
+  # 함수 기본값
+  memorySize: 1024
+  timeout: 10
+
+  httpApi:
+    cors: true
+
+  environment:
+    USERS_TABLE: ${self:custom.usersTableName}
+    UPLOAD_BUCKET: ${self:custom.uploadBucketName}
+    DEST_BUCKET: ${self:custom.destBucketName}
+
+  iamRoleStatements:
+    # DynamoDB 권한 (Users API)
+    - Effect: Allow
+      Action:
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+        - dynamodb:Query
+        - dynamodb:Scan
+      Resource:
+        - arn:aws:dynamodb:${self:provider.region}:*:table/${self:custom.usersTableName}
+
+    # S3 권한 (포토 최적화)
+    - Effect: Allow
+      Action:
+        - s3:GetObject
+        - s3:PutObject
+        - s3:ListBucket
+      Resource:
+        - arn:aws:s3:::${self:custom.uploadBucketName}
+        - arn:aws:s3:::${self:custom.uploadBucketName}/*
+        - arn:aws:s3:::${self:custom.destBucketName}
+        - arn:aws:s3:::${self:custom.destBucketName}/*
+
+functions:
+  # Users API (HTTP API v2)
+  getUser:
+    handler: handler.getUser
+    events:
+      - httpApi:
+          path: /users/{id}
+          method: get
+
+  createUser:
+    handler: handler.createUser
+    events:
+      - httpApi:
+          path: /users
+          method: post
+
+  updateUser:
+    handler: handler.updateUser
+    events:
+      - httpApi:
+          path: /users/{id}
+          method: put
+
+  deleteUser:
+    handler: handler.deleteUser
+    events:
+      - httpApi:
+          path: /users/{id}
+          method: delete
+
+  # 포토 최적화 (S3 업로드 트리거)
+  optimize:
+    handler: handler.optimize
+    events:
+      - s3:
+          bucket: ${self:custom.uploadBucketName}
+          event: s3:ObjectCreated:*
+          existing: false   # 이 스택에서 버킷을 생성해 이벤트 연결
+
+resources:
+  Resources:
+    # 업로드 버킷 (트리거 소스)
+    UploadBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:custom.uploadBucketName}
+        OwnershipControls:
+          Rules:
+            - ObjectOwnership: BucketOwnerEnforced
+
+    # 결과 저장 버킷
+    DestBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:custom.destBucketName}
+        OwnershipControls:
+          Rules:
+            - ObjectOwnership: BucketOwnerEnforced
+
+    # Users DynamoDB 테이블 (이미 있으면 이 블록을 지우세요)
+    UsersTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.usersTableName}
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
