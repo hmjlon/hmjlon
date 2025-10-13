@@ -1,6 +1,4 @@
 function solution(my_string, alp) {
-  return my_string
-    .split("")
-    .map(letter => letter === alp ? letter.toUpperCase() : letter)
-    .join("");
+  
+    return my_string.replaceAll(alp, alp.toUpperCase());
 }
